@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cities for San Diego | BDA 603 Project</title>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #1f2937;
+        }
+        /* Custom scroll behavior for smooth transition */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<!-- Add script to the <head> of your page to load the embeddable map component -->
+<script type="module" src="https://js.arcgis.com/embeddable-components/4.33/arcgis-embeddable-components.esm.js"></script>
+</head>
+<body class="bg-white text-gray-800">
+
+
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <nav class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between">
+            <a href="#homepage" class="text-2xl font-bold text-blue-900 hover:text-blue-700 transition duration-300">Urban Oasis Village </a>
+            <div class="flex-grow md:flex md:items-center md:w-auto">
+                <ul class="flex flex-wrap items-center justify-end w-full text-lg">
+                    <li class="p-2 lg:p-4"><a href="#casestudy" class="hover:text-blue-700 transition-colors duration-300">Case Study</a></li>
+                    <li class="p-2 lg:p-4"><a href="#arcgis" class="hover:text-blue-700 transition-colors duration-300">ArcGIS</a></li>
+                    <li class="p-2 lg:p-4"><a href="#video" class="hover:text-blue-700 transition-colors duration-300">Video</a></li>
+                    <li class="p-2 lg:p-4"><a href="#data" class="hover:text-blue-700 transition-colors duration-300">Data & Analysis</a></li>
+                    <li class="p-2 lg:p-4"><a href="#calltoaction" class="hover:text-blue-700 transition-colors duration-300">Action</a></li>
+                    <li class="p-2 lg:p-4"><a href="#about" class="hover:text-blue-700 transition-colors duration-300">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Homepage Section -->
+         <section id="homepage" class="relative bg-blue-900 text-white flex items-center justify-center h-[60vh] md:h-[70vh] rounded-b-xl shadow-lg">
+
+        
+
+        <!--<section id="homepage" class="relative text-white flex items-center justify-center h-[60vh] md:h-[70vh] bg-cover bg-center rounded-b-xl shadow-lg" 
+  style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80');"> -->
+
+
+
+
+            <div class="absolute inset-0 bg-black opacity-50 rounded-b-xl"></div>
+            <div class="relative text-center p-8 max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+  Invisible in Plain Sight: Homelessness and Urban Inequality in Downtown&nbsp;San&nbsp;Diego
+</h1>
+
+                <p class="mt-4 text-xl sm:text-2xl font-light">
+                   A Mixed-Methods Analysis Using Digital Ethnography and Big Data Analytics
+                </p>
+            </div>
+        </section>
+
+        <!-- Case Study Section -->
+        <section id="casestudy" class="container mx-auto px-4 py-16 md:py-24">
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-8 md:mb-12">The Case for Change</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 text-lg">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-800">The Problem: What, Where, When, Who</h3>
+                        <p class="mt-4 leading-relaxed">
+                            **What:** Downtown San Diego, often portrayed as a hub of culture, commerce, and tourism, is also home to one of the region’s most visible homelessness crises. This project examines homelessness not as an individual misfortune but as a product of deliberate spatial, economic, and environmental decisions. Through a mixed-methods approach—combining virtual fieldwork via Google Street View and big data analysis of the city’s 311 reports—Invisible in Plain Sight reveals how urban design and policy shape who gets to belong in public space, and who is pushed out."
+                            <br><br>
+                            **Where:** The study focuses on Downtown San Diego, particularly the East Village, Civic Center, Waterfront, and Commercial Street corridors. These areas offer a stark visual and environmental contrast:
+•	Waterfront Park & Embarcadero – Landscaped, shaded, and equipped with amenities to attract tourists and residents.
+•	East Village (14th & Market) – A gentrification epicenter where upscale apartments rise next to encampments.
+•	Commercial Street & Barrio Logan industrial zones – Minimal shade, poor air quality, and almost no public amenities, yet heavily populated by unhoused residents.
+"
+                            <br><br>
+                            **When:** Field observations were conducted in 2024, paired with an analysis of all homelessness-related 311 service requests from the same year. Temporal trends revealed spikes in encampment reports immediately before high-profile events such as Comic-Con and Padres games, suggesting targeted displacement efforts to “clean up” public space for visitors.
+                            <br><br>
+                            **Who:** This urban geography affects:
+•	Unhoused residents – Experiencing daily displacement, environmental exposure, and lack of basic services.
+•	Local government & law enforcement – Managing homelessness primarily through encampment sweeps and enforcement.
+•	Business owners & developers – Benefiting from public space investments and redevelopment while often lobbying for stricter enforcement in nearby streets.
+•	Advocates & nonprofits – Working to fill service gaps, yet constrained by limited resources and restrictive policies.
+
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-blue-800">The Research: Why and How</h3>
+                        <p class="mt-4 leading-relaxed">
+                            **Why:** The project is grounded in the understanding that homelessness in San Diego is not accidental—it’s the visible outcome of zoning priorities, redevelopment strategies, and selective sustainability investments. By mapping the absence of shade, restrooms, and clean air in encampment zones, the research exposes how policy choices and urban design perpetuate inequality.
+                            <br><br>
+                            **How:** Using a digital ethnography protocol, the research conducted “virtual walks” through five targeted areas, documenting hostile architecture, amenity scarcity, and environmental hazards. These qualitative observations were paired with a 311 data dashboard that mapped encampment reports, overlaid environmental indicators, and tracked reporting spikes over time. Together, these methods created a layered picture of how space, policy, and public perception intersect to sustain inequality in San Diego’s urban core.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ArcGIS Dashboard Section -->
+        <section id="arcgis" class="container mx-auto px-4 py-16 md:py-24">
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-8 md:mb-12">ArcGIS Dashboard Integration: Mapping Inequality in Real Time</h2>
+                <p class="text-lg text-center mb-8 max-w-3xl mx-auto">
+                    The Urban Oasis ArcGIS Dashboard is more than a map—it’s a living, interactive tool that exposes the hidden geography of homelessness in Downtown San Diego. Built from the city’s 2024 311 service request data on homeless encampments, it combines spatial analysis, environmental overlays, and temporal trends into a single platform that makes inequality visible at a glance.
+What the Dashboard Shows
+•	Encampment Hotspots: Each point represents a 311 report, clustered to reveal areas of concentrated displacement risk.
+•	Environmental Context: Overlays highlight tree cover, shade access, and known urban heat islands—often showing that encampments exist in the most inhospitable zones.
+•	Temporal Trends: A timeline view displays spikes in reporting before high-profile events, suggesting targeted sweeps linked to image management rather than long-term solutions.
+•	Council District Disparities: Side-by-side charts show which districts report most frequently and how resources are allocated in response.
+Why It Matters
+The dashboard turns abstract numbers into a clear picture of how public complaints, enforcement patterns, and environmental neglect intersect. This visibility is critical for advocacy, enabling policymakers, journalists, and the public to see the direct spatial and temporal patterns that perpetuate homelessness.
+How It Supports Advocacy Goals
+By making the data interactive and publicly accessible, the dashboard:
+•	Empowers stakeholders with clear, location-specific evidence.
+•	Reveals systemic bias in where enforcement occurs versus where public investment flows.
+•	Links local patterns to global standards by aligning findings with UN Sustainable Development Goals (SDG 1, 10, and 11).
+
+
+                </p>
+                <!-- Placeholder for ArcGIS Dashboard -->
+                <div class="aspect-w-16 aspect-h-9 w-full rounded-xl overflow-hidden shadow-lg border-2 border-gray-300">
+                    <iframe class="w-full h-96" src="https://www.arcgis.com/apps/dashboards/d0b6cfa00c184aba9d726a6987302f4d" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="text-center mt-6">
+                    <a href="https://www.arcgis.com/apps/dashboards/d0b6cfa00c184aba9d726a6987302f4d" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-md">
+                        View Full Dashboard
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video" class="container mx-auto px-4 py-16 md:py-24">
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-8 md:mb-12">Project Summary Video</h2>
+                <!-- Placeholder for Video -->
+                <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg border-2 border-gray-300">
+                    <iframe class="w-full h-96" src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="mt-8 text-lg">
+                    <h3 class="text-2xl font-semibold text-blue-800">Video Summary (English)</h3>
+                    <p class="mt-2 leading-relaxed">
+                        This 6-minute video presentation explains the core problem, our data-driven approach, and the impact we hope to achieve. We walk through our spatial analysis and present a clear path forward for community engagement and policy change.
+                    </p>
+                    <h3 class="text-2xl font-semibold text-blue-800 mt-6">Resumen del Video (Español)</h3>
+                    <p class="mt-2 leading-relaxed">
+                        Esta presentación de 6 minutos explica el problema principal, nuestro enfoque basado en datos y el impacto que esperamos lograr. Analizamos nuestro análisis espacial y presentamos un camino claro para la participación comunitaria y el cambio de políticas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data & Analysis Section -->
+         <section id="data" class="container mx-auto px-4 py-16 md:py-24">
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-8 md:mb-12">Data & Analysis Methods</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                    <div>
+                        <p class="text-lg leading-relaxed">
+
+                            <div x-data="{ active: null }" class="mt-8 text-lg leading-relaxed space-y-4">
+  <p>
+    <strong>Invisible in Plain Sight</strong> is grounded in a commitment to combining the human-scale insights of ethnography with the citywide patterns revealed by data science. This mixed-methods approach ensures that every statistic is rooted in lived experience—and that every observation is backed by measurable evidence.
+  </p>
+
+  <h3 class="text-2xl font-semibold text-blue-800 mt-6">Methods Used</h3>
+
+  <!-- Accordion Item 1 -->
+  <div class="border rounded-lg shadow">
+    <button @click="active === 1 ? active = null : active = 1"
+      class="w-full text-left px-4 py-3 font-semibold text-blue-700 bg-gray-100 hover:bg-gray-200 focus:outline-none">
+      Qualitative Observations
+    </button>
+    <div x-show="active === 1" x-collapse class="px-4 py-3 bg-white">
+      Conducted virtual “walks” through target locations using Google Street View. Documented instances of hostile architecture, availability of public amenities, environmental conditions, and visible signs of displacement.
+    </div>
+  </div>
+
+  <!-- Accordion Item 2 -->
+  <div class="border rounded-lg shadow">
+    <button @click="active === 2 ? active = null : active = 2"
+      class="w-full text-left px-4 py-3 font-semibold text-blue-700 bg-gray-100 hover:bg-gray-200 focus:outline-none">
+      Spatial Analysis
+    </button>
+    <div x-show="active === 2" x-collapse class="px-4 py-3 bg-white">
+      Mapped all 2024 homelessness-related 311 service requests in Downtown San Diego. Applied kernel density estimation to identify encampment hotspots.
+    </div>
+  </div>
+
+  <!-- Accordion Item 3 -->
+  <div class="border rounded-lg shadow">
+    <button @click="active === 3 ? active = null : active = 3"
+      class="w-full text-left px-4 py-3 font-semibold text-blue-700 bg-gray-100 hover:bg-gray-200 focus:outline-none">
+      Hotspot Mapping
+    </button>
+    <div x-show="active === 3" x-collapse class="px-4 py-3 bg-white">
+      Created interactive heatmaps to visualize where encampments cluster over time. Cross-referenced these with known “sweep” dates to identify patterns of displacement.
+    </div>
+  </div>
+
+  <!-- Accordion Item 4 -->
+  <div class="border rounded-lg shadow">
+    <button @click="active === 4 ? active = null : active = 4"
+      class="w-full text-left px-4 py-3 font-semibold text-blue-700 bg-gray-100 hover:bg-gray-200 focus:outline-none">
+      Demographic Overlays
+    </button>
+    <div x-show="active === 4" x-collapse class="px-4 py-3 bg-white">
+      Incorporated census tract data to examine the socioeconomic and racial composition of areas with high encampment activity. Found strong correlations between historically underinvested neighborhoods and current homelessness hotspots.
+    </div>
+  </div>
+</div>
+                           <!-- At the heart of Invisible in Plain Sight is a commitment to pairing the human-scale insights of ethnography with the citywide patterns revealed by data science. This mixed-methods approach ensures that every number is grounded in lived experience—and every observation is supported by measurable evidence.
+Methods Used
+1.	Spatial Analysis
+o	Mapped all 2024 homelessness-related 311 service requests in Downtown San Diego.
+o	Used kernel density estimation to identify encampment hotspots.
+o	Overlaid environmental datasets (tree cover, shade, and urban heat island indexes) to understand the physical conditions in these zones.
+2.	Hotspot Mapping
+o	Created interactive heatmaps to show where encampments cluster over time.
+o	Cross-referenced with known “sweep” dates to reveal displacement patterns.
+3.	Demographic Overlays
+o	Incorporated census tract data to analyze the socioeconomic and racial composition of areas with the highest encampment reports.
+o	Found strong correlations between historically underinvested neighborhoods and current homelessness hotspots.
+4.	Qualitative Observations
+o	Conducted virtual “walks” through target locations using Google Street View.
+o	Documented hostile architecture, public amenity availability, environmental conditions, and signs of displacement. -->
+
+<h3 class="text-2xl font-semibold text-blue-800 mt-8">Key Findings</h3>
+<ul class="list-disc list-inside mt-4 text-lg space-y-2">
+  <li><strong>Spatial Segregation:</strong> Public investment in amenities and green space is heavily concentrated in tourist and business districts, while encampment zones are systematically deprived.</li>
+  <li><strong>Event-Driven Displacement:</strong> Reporting spikes occurred immediately before major events like Comic-Con, Padres games, and city festivals—often followed by visible encampment sweeps.</li>
+  <li><strong>Environmental Injustice:</strong> Encampment areas frequently overlap with urban heat islands, lacking shade, clean air, and access to water.</li>
+  <li><strong>311 as an Enforcement Trigger:</strong> The data shows a pattern where public reports are closely followed by enforcement actions, reinforcing cycles of displacement rather than resolution.</li>
+</ul>
+
+
+
+                        </p>
+<h3 class="text-2xl font-semibold text-blue-800 mt-8">UN Sustainable Development Goals Alignment</h3>
+<p class="mt-4 text-lg leading-relaxed">
+    The analysis directly addresses three UN SDGs:
+</p>
+<ul class="list-disc list-inside mt-4 text-lg space-y-2">
+    <li>
+        <strong>SDG 1: No Poverty</strong> – By documenting how public policy and urban design perpetuate housing insecurity.
+    </li>
+    <li>
+        <strong>SDG 10: Reduced Inequalities</strong> – By revealing systemic disparities in infrastructure investment.
+    </li>
+    <li>
+        <strong>SDG 11: Sustainable Cities and Communities</strong> – By calling for inclusive urban design that supports all residents.
+    </li>
+</ul>
+
+
+                       <!-- <h3 class="text-2xl font-semibold text-blue-800 mt-8">Targeted UN Sustainable Development Goals</h3>
+                        <ul class="list-disc list-inside mt-4 text-lg space-y-2">
+                            <li>**SDG 11: Sustainable Cities and Communities** - Focus on creating inclusive, safe, resilient, and sustainable human settlements.</li>
+                            <li>**SDG 10: Reduced Inequalities** - Aim to empower and promote the social, economic, and political inclusion of all.</li>
+                            <li>**SDG 3: Good Health and Well-being** - Work to ensure healthy lives and promote well-being for all ages.</li>
+                        </ul>
+                    --></div>
+                    <div class="flex items-center justify-center">
+                        <!-- Placeholder for a Data Visualization Chart -->
+                         <!-- Add custom element to <body> of your page -->
+ <arcgis-embedded-map style="height:600px;width:700px;" item-id="cbc6f3bf37dc45618c5a2e01e0f0e487" theme="light" heading-enabled legend-enabled information-enabled center="-117.05542713269915,32.79468738786369"scale="288895.2771445" portal-url="https://sdsugeo.maps.arcgis.com" ></arcgis-embedded-map>
+                       <!-- <img src="https://js.arcgis.com/embeddable-components/4.33/arcgis-embeddable-components.esm.js" alt="Data visualization chart showing key findings." class="rounded-xl shadow-lg w-full">-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="calltoaction" class="container mx-auto px-4 py-16 md:py-24">
+            <div class="bg-blue-900 text-white p-8 md:p-12 rounded-2xl shadow-xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Join the Movement: Take Action Now!</h2>
+                <p class="text-xl md:text-2xl font-light mb-8 max-w-4xl mx-auto">
+                    Your voice is crucial. We need your help to advocate for a more equitable San&nbsp;Diego.
+
+                </p>
+                <div class="flex flex-wrap justify-center gap-6 mt-8">
+                    <!--<a href="#" class="bg-white text-blue-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">
+                        Sign Our Petition
+                    </a>-->
+                    <a href="https://www.sandiegocounty.gov/content/sdc/bos.html" class="bg-white text-blue-900 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">
+                        Contact Your Representatives
+                    </a>
+                </div>
+                <div class="mt-8 text-lg">
+                    <p class="font-semibold">Local Resources:</p>
+                    <p>
+                        <a href="mailto:HOT@pd.sandiego.gov" class="underline hover:text-blue-200">HOT@pd.sandiego.gov</a> |
+                        <a href="tel:+619-446-1010" class="underline hover:text-blue-200">(619)446-1010</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="container mx-auto px-4 py-16 md:py-24">
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-8 md:mb-12">About the Project Team</h2>
+                <div class="flex flex-col items-center justify-center">
+                    <!-- Placeholder for Student Photo -->
+                    <img src="https://placehold.co/150x150/d1d5db/333?text=Your+Photo" alt="Project team member photo" class="rounded-full w-32 h-32 mb-4 shadow-md">
+                    <h3 class="text-2xl font-semibold text-blue-800">Charles Gottesman</h3>
+                    <p class="text-lg mt-2 max-w-2xl mx-auto leading-relaxed">
+                        With 20 years of experience as an CEO of a food manufacturing company in San Diego, California.  Expertise in optimizing supply chain efficiencies, implementing lean principles, and fostering a culture of continuous improvement. Experienced in building strong client relationships and delivering exceptional results in highly competitive markets. Now pursuing my Master’s in Big Data Science at SDSU, I’m passionate about leveraging data-driven innovation to advance smart city development, sustainable practices, and community-driven solutions that create lasting impact.
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-200">
+                    <h3 class="text-2xl font-semibold text-blue-800 mb-4">Acknowledgements</h3>
+                    <p class="text-lg leading-relaxed max-w-4xl mx-auto">
+                        We would like to extend our gratitude to our mentors, collaborators at SDSU, and all the community members who shared their stories and insights. This project would not have been possible without their invaluable support.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <p class="text-sm">&copy; 2025 BDA 603 Project | All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
